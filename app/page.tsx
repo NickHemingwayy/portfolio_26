@@ -1,63 +1,93 @@
+import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
+import { TypingEffect } from "@/components/effects/typing-effect";
+import About from "@/components/sections/About";
+import Projects from "@/components/sections/Projects";
+import Technologies from "@/components/sections/Technologies";
+import { Button } from "@/components/ui/button";
+import Coin from "@/components/ui/coin";
+import { Separator } from "@/components/ui/separator";
+import { ArrowRight, MapPin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex min-h-screen items-center justify-center text-white">
+      <main className="w-screen min-h-screen">
+        <div className="container px-4 sm:px-16 gap-4 w-full h-screen flex items-center sticky top-0 mx-auto">
+          <BubbleBackground
+            interactive={true}
+            className="fixed inset-0 flex items-center justify-center bg-black "
+          />
+          <div className="w-content z-50">
+            <h1 className="font-urban text-6xl font-bold">
+              <TypingEffect text="Nick Hemingway" delay={0} />
+            </h1>
+            <div className="flex gap-2 items-center group">
+              <span className="text-2xl font-light z-50">
+                <TypingEffect text="Software Developer /" delay={1.8} />
+              </span>
+              <div className="overflow-x-hidden">
+                <div className="translate-x-[-150%] -rotate-90 group-hover:rotate-0 group-hover:translate-x-0 transition-transform fill-mode-forwards">
+                  <Coin />
+                </div>
+              </div>
+            </div>
+            <div className="flex mt-4">
+              <Link
+                href="https://www.linkedin.com/in/nick-hemingway-a848b61ab/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:translate-y-[-15%] transition-transform p-2"
+              >
+                <svg
+                  preserveAspectRatio="xMidYMid"
+                  className="w-8 aspect-square"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
+                    fill="#ffff"
+                  />
+                </svg>
+              </Link>
+              <Link
+                href="https://github.com/NickHemingwayy"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:translate-y-[-15%] transition-transform p-2"
+              >
+                <svg
+                  viewBox="0 0 1024 1024"
+                  className="w-8 aspect-square"
+                  fill="none"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+                    transform="scale(64)"
+                    fill="#ffff"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+          <div className="flex justify-center absoloute sm:static"></div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="bg-black z-10 relative pb-10 sm:pb-20">
+          <div className="container mx-auto px-4 sm:px-16">
+            <Separator className="mb-10 sm:mb-16 bg-white/50" />
+            <About />
+
+            <Separator className="my-10 sm:my-16 bg-white/50" />
+
+            <Technologies />
+
+            <Separator className="my-10 sm:my-16 bg-white/50" />
+            <Projects />
+          </div>
         </div>
       </main>
     </div>

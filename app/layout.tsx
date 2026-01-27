@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// Fonts
+import { Inter, Urbanist } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import { CoinProvider } from "./providers/coinProvider";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter", // Define a CSS variable name
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const urbanist = Urbanist({
+  // Use underscore for multi-word font names
   subsets: ["latin"],
+  variable: "--font-urbanist",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +32,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overscroll-none">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${urbanist.variable} antialiased dark`}
       >
-        {children}
+        <CoinProvider>
+          <Navbar />
+
+          {children}
+        </CoinProvider>
       </body>
     </html>
   );
