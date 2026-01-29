@@ -3,7 +3,7 @@ import projects from "@/app/data/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
 import Image from "next/image";
@@ -38,9 +38,28 @@ export default function ProjectPage() {
             Back
           </Link>
         </Button>
-        <h1 className="font-urban text-3xl sm:text-6xl font-bold mt-2">
-          {project.title}
-        </h1>
+        <div className="flex flex-col sm:flex-row justify-between gap-4 flex-wrap">
+          <h1 className="font-urban text-4xl sm:text-6xl font-bold mt-2">
+            {project.title}
+          </h1>
+          {project.url && (
+            <span>
+              <Button
+                variant={"outline"}
+                asChild
+                className="px-4 py-2 font-medium txt-medium"
+              >
+                <Link
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open URL <ExternalLink />
+                </Link>
+              </Button>
+            </span>
+          )}
+        </div>
         <span className="block mt-6 sm:mt-12">Technologies:</span>
         <div className="flex gap-2 mt-2 flex-wrap">
           {project.technologies.map((technology) => (

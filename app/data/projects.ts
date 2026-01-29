@@ -37,7 +37,7 @@ const designStudio: Project = {
     "A home builder tool that gives potential buyers a better insight of what their home could look like.",
   description:
     "Design studio is a web application build I completed during my time at Dvele. The aim of this build was to create a lead-driving builder tool to give potential Dvele home buyers a better insight of what their home could look like. Important features include integration with an ERP system to retrieve build data, saving builds to users accounts and generating a PDF copy of their builds selections. \n\nI had a primary role in the design and development of this application and was responsible for a successful launch to the public. ",
-  url: "",
+  url: "https://altadena-studio.dvele.com/",
   gallery: [
     "/projects/design-studio/design-studio-1.jpg",
     "/projects/design-studio/design-studio-2.jpg",
@@ -58,7 +58,7 @@ const showOfff: Project = {
     "A streamlined portfolio maker that allows you to centralize your contact information and showcase your skills.",
   description:
     "ShowOfff is my personal brain child stemming from an itch to prove to myself what I was capable of building solo after a few years of industry level experience. The app attempts to solve a gap in the market by offering a seamless setup of a personal portfolio to easily be shared as a digital business card. I used this build as an opportunity to try out a few new technologies I had been interested in, including Remix and Supabase.",
-  url: "",
+  url: "https://showofff.me/",
   gallery: [
     "/projects/show-offf/showofff-1.jpg",
     "/projects/show-offf/showofff-2.jpg",
@@ -74,7 +74,7 @@ const pack4u: Project = {
     "A profesional, dynamic website build using Bootstrap, jQuery, and PHP.",
   description:
     "Pack4U was my first website build that featured complex CSS3 transitions animated from scratch. The client was after eye-catching visuals without sacrificing any performance or accessibility, highlighting importance to how animations were approached.",
-  url: "",
+  url: "https://customhealth.com/?origin=pack4u",
   gallery: [
     "/projects/pack4u/pack4u-1.jpg",
     "/projects/pack4u/pack4u-2.jpg",
