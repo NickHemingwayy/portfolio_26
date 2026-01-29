@@ -22,7 +22,7 @@ const Projects = () => {
               <h3 className="font-bold text-xl">{project.title}</h3>
             </div>
 
-            <p className="text-muted-foreground">{project.description}</p>
+            <p className="text-muted-foreground">{project.blurb}</p>
           </Link>
         ))}
       </div>
