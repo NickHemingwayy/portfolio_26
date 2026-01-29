@@ -18,13 +18,13 @@ const About = () => {
         </span>
         <p className="my-2">
           I build full-stack web applications with TypeScript, specializing in
-          Next.js and SvelteKit.
+          Next.js and Expo.
         </p>
         <p>
           I develop clean, performant solutions that solve real business
           problems. My work spans from crafting intuitive user interfaces to
           designing scalable backend systems. Check out my projects below to see
-          how I've helped companies ship better products faster.
+          how I've implemented real world solutions.
         </p>
       </div>
 
