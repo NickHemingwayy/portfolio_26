@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // Fonts
-import { Inter, Urbanist } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import { CoinProvider } from "./providers/coinProvider";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { Inter, Urbanist } from "next/font/google";
+import { CoinProvider } from "./providers/coinProvider";
 
 const inter = Inter({
   subsets: ["latin"],
