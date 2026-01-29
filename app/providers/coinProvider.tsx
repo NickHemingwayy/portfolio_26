@@ -1,18 +1,19 @@
 // app/providers/theme-provider.tsx
 "use client";
 
+import { StringifyOptions } from "node:querystring";
 import { createContext, useContext, useState } from "react";
 
 const CoinContext = createContext({
-  coinsCollected: 0, // Default value
-  collectCoin: () => {},
+  coinsCollected: [] as string[], // Default value
+  collectCoin: (id: string) => {},
 });
 
 export function CoinProvider({ children }: { children: React.ReactNode }) {
-  const [coinsCollected, setCoinsCollected] = useState(0); // State for the theme
+  const [coinsCollected, setCoinsCollected] = useState<string[]>([]); // State for the theme
 
-  const collectCoin = () => {
-    setCoinsCollected((prevCoinsCollected) => prevCoinsCollected + 1);
+  const collectCoin = (id: string) => {
+    setCoinsCollected((prevCoinsCollected) => [...prevCoinsCollected, id]);
   };
 
   return (

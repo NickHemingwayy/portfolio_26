@@ -15,6 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import Coin from "@/components/ui/coin";
 
 export default function ProjectPage() {
   const params = useParams();
@@ -27,8 +28,8 @@ export default function ProjectPage() {
   }
   return (
     <div className="flex min-h-screen items-center justify-center bg-black text-white">
-      <main className="container max-w-5xl min-h-screen lg:px-10 sm:px-16 pb-10 sm:pb-20 pt-30">
-        <Button variant={"link"} asChild className="text-accent">
+      <main className="container max-w-5xl min-h-screen px-4 lg:px-10 sm:px-16 pb-10 sm:pb-20 pt-24 sm:pt-30">
+        <Button variant={"link"} asChild className="text-accent !ps-0">
           <Link
             href={"/#projects"}
             className="flex items-center gap-2 text-accent"
@@ -37,9 +38,11 @@ export default function ProjectPage() {
             Back
           </Link>
         </Button>
-        <h1 className="font-urban text-6xl font-bold mt-2">{project.title}</h1>
-        <span className="block mt-12">Technologies:</span>
-        <div className="flex gap-2 mt-2">
+        <h1 className="font-urban text-3xl sm:text-6xl font-bold mt-2">
+          {project.title}
+        </h1>
+        <span className="block mt-6 sm:mt-12">Technologies:</span>
+        <div className="flex gap-2 mt-2 flex-wrap">
           {project.technologies.map((technology) => (
             <Badge key={technology} variant={"outline"}>
               {technology}
@@ -78,6 +81,11 @@ export default function ProjectPage() {
               </DialogContent>
             </Dialog>
           ))}
+          {projectID == "show-offf" && (
+            <div className="w-full aspect-[3/2] flex items-center justify-center">
+              <Coin id="3" />
+            </div>
+          )}
         </div>
       </main>
     </div>

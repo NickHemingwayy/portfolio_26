@@ -1,9 +1,11 @@
+import Coin from "../ui/coin";
+
 const Technologies = () => {
   return (
     <div className="w-full items-center justify-center">
       <h2 className="font-urban text-4xl font-bold">Technologies</h2>
       <div className="grid grid-cols-3 place-items-center gap-4 sm:grid-cols-3 sm:gap-8 md:grid-cols-4 xl:grid-cols-8 mt-8">
-        <div className="bg-accent-foreground/10 flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
           <svg
             viewBox="0 0 256 256"
             className="w-8 sm:w-12 aspect-square"
@@ -21,7 +23,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">TypeScript</span>
         </div>
 
-        <div className="bg-accent-foreground/10 flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
           <svg viewBox="0 0 569 512" className="w-8 sm:w-12 aspect-square">
             <g fill="none" fillRule="evenodd">
               <g
@@ -45,7 +47,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">React</span>
         </div>
 
-        <div className="bg-accent-foreground/10 flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
           <svg
             fill="none"
             viewBox="0 0 54 33"
@@ -68,7 +70,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">Tailwind</span>
         </div>
 
-        <div className="bg-accent-foreground/10 flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
           <svg
             fill="none"
             viewBox="16 16 32 32"
@@ -110,7 +112,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">Django</span>
         </div>
 
-        <div className="bg-accent-foreground/10 flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
           <svg viewBox="0 0 32 32" className="w-8 sm:w-12 aspect-square">
             <path
               d="M14.135 4H18.1v18.169a26.218 26.218 0 0 1-5.143.535c-4.842-.005-7.362-2.168-7.362-6.322 0-4 2.673-6.6 6.816-6.6a6.448 6.448 0 0 1 1.724.2V4Zm0 9.142a3.992 3.992 0 0 0-1.337-.2c-2 0-3.163 1.223-3.163 3.366 0 2.087 1.107 3.239 3.138 3.239a9.355 9.355 0 0 0 1.362-.1v-6.3Z"
@@ -124,7 +126,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">Python</span>
         </div>
 
-        <div className="bg-accent-foreground/10 flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
           <svg
             preserveAspectRatio="xMidYMid"
             viewBox="0 0 256 252"
@@ -139,7 +141,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">MySQL</span>
         </div>
 
-        <div className="bg-accent-foreground/10 flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
           <svg
             preserveAspectRatio="xMidYMid"
             viewBox="0 0 256 256"
@@ -153,41 +155,47 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">Git</span>
         </div>
 
-        <div className="bg-accent-foreground/10 flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
-          <svg
-            viewBox="0 0 54 80"
-            fill="none"
-            className="w-8 sm:w-12 aspect-square"
-          >
-            <g clipPath="url(#figma__clip0_912_3)">
-              <path
-                d="M13.3333 80.0002C20.6933 80.0002 26.6667 74.0268 26.6667 66.6668V53.3335H13.3333C5.97333 53.3335 0 59.3068 0 66.6668C0 74.0268 5.97333 80.0002 13.3333 80.0002Z"
-                fill="#0ACF83"
-              />
-              <path
-                d="M0 39.9998C0 32.6398 5.97333 26.6665 13.3333 26.6665H26.6667V53.3332H13.3333C5.97333 53.3332 0 47.3598 0 39.9998Z"
-                fill="#A259FF"
-              />
-              <path
-                d="M0 13.3333C0 5.97333 5.97333 0 13.3333 0H26.6667V26.6667H13.3333C5.97333 26.6667 0 20.6933 0 13.3333Z"
-                fill="#F24E1E"
-              />
-              <path
-                d="M26.6667 0H40.0001C47.3601 0 53.3334 5.97333 53.3334 13.3333C53.3334 20.6933 47.3601 26.6667 40.0001 26.6667H26.6667V0Z"
-                fill="#FF7262"
-              />
-              <path
-                d="M53.3334 39.9998C53.3334 47.3598 47.3601 53.3332 40.0001 53.3332C32.6401 53.3332 26.6667 47.3598 26.6667 39.9998C26.6667 32.6398 32.6401 26.6665 40.0001 26.6665C47.3601 26.6665 53.3334 32.6398 53.3334 39.9998Z"
-                fill="#1ABCFE"
-              />
-            </g>
-            <defs>
-              <clipPath id="figma__clip0_912_3">
-                <rect width="53.3333" height="80" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-          <span className="text-center text-sm font-medium">Figma</span>
+        <div className="group relative">
+          <div className="absolute mx-auto group-hover:translate-y-[-100%] transition-transform right-0 w-full flex justify-center">
+            <Coin id="2" />
+          </div>
+
+          <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+            <svg
+              viewBox="0 0 54 80"
+              fill="none"
+              className="w-8 sm:w-12 aspect-square"
+            >
+              <g clipPath="url(#figma__clip0_912_3)">
+                <path
+                  d="M13.3333 80.0002C20.6933 80.0002 26.6667 74.0268 26.6667 66.6668V53.3335H13.3333C5.97333 53.3335 0 59.3068 0 66.6668C0 74.0268 5.97333 80.0002 13.3333 80.0002Z"
+                  fill="#0ACF83"
+                />
+                <path
+                  d="M0 39.9998C0 32.6398 5.97333 26.6665 13.3333 26.6665H26.6667V53.3332H13.3333C5.97333 53.3332 0 47.3598 0 39.9998Z"
+                  fill="#A259FF"
+                />
+                <path
+                  d="M0 13.3333C0 5.97333 5.97333 0 13.3333 0H26.6667V26.6667H13.3333C5.97333 26.6667 0 20.6933 0 13.3333Z"
+                  fill="#F24E1E"
+                />
+                <path
+                  d="M26.6667 0H40.0001C47.3601 0 53.3334 5.97333 53.3334 13.3333C53.3334 20.6933 47.3601 26.6667 40.0001 26.6667H26.6667V0Z"
+                  fill="#FF7262"
+                />
+                <path
+                  d="M53.3334 39.9998C53.3334 47.3598 47.3601 53.3332 40.0001 53.3332C32.6401 53.3332 26.6667 47.3598 26.6667 39.9998C26.6667 32.6398 32.6401 26.6665 40.0001 26.6665C47.3601 26.6665 53.3334 32.6398 53.3334 39.9998Z"
+                  fill="#1ABCFE"
+                />
+              </g>
+              <defs>
+                <clipPath id="figma__clip0_912_3">
+                  <rect width="53.3333" height="80" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <span className="text-center text-sm font-medium">Figma</span>
+          </div>
         </div>
       </div>
     </div>

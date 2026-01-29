@@ -38,5 +38,39 @@ const designStudio: Project = {
     "/projects/design-studio/design-studio-2.jpg",
   ],
 };
-const projects = [dveleIQ, designStudio];
+
+const showOfff: Project = {
+  id: "show-offf",
+  technologies: [
+    "Remix.js",
+    "TailwindCSS",
+    "TypeScript",
+    "PostreSQL",
+    "Supabase",
+  ],
+  title: "Show Offf",
+  description:
+    "A streamlined portfolio maker that allows you to cntralize your contact information and showcase your skills.",
+  url: "",
+  gallery: [
+    "/projects/show-offf/showofff-1.jpg",
+    "/projects/show-offf/showofff-2.jpg",
+    "/projects/show-offf/showofff-3.jpg",
+  ],
+};
+
+const pack4u: Project = {
+  id: "pack-4-u",
+  technologies: ["ModX", "Bootstrap", "JQuery", "PHP"],
+  title: "Pack4U",
+  description:
+    "A profesional, dynamic website build using Bootstrap, jQuery, and PHP.",
+  url: "",
+  gallery: [
+    "/projects/pack4u/pack4u-1.jpg",
+    "/projects/pack4u/pack4u-2.jpg",
+    "/projects/pack4u/pack4u-3.jpg",
+  ],
+};
+const projects = [dveleIQ, designStudio, showOfff, pack4u];
 export default projects;

@@ -1,10 +1,17 @@
 import { MapPin } from "lucide-react";
+import Flashlight from "../Flashlight";
+import Coin from "../ui/coin";
 
 const About = () => {
   return (
-    <div className="lg:max-w-1/2 w-full items-center justify-center my-10 sm:my-16">
-      <div className="flex-col flex justify-center">
-        <h2 className="font-urban text-4xl font-bold">Who am I?</h2>
+    <div className="w-full grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="flex-col flex justify-center w-full my-10 sm:my-16">
+        <div className="flex items-end gap-4">
+          <h2 className="font-urban text-4xl font-bold">Who am I?</h2>
+          <div className="md:hidden">
+            <Coin id="4" />
+          </div>
+        </div>
         <span className="text-muted-foreground flex items-center gap-2">
           <MapPin size={"1em"} />
           Kelowna, BC
@@ -20,7 +27,10 @@ const About = () => {
           how I've helped companies ship better products faster.
         </p>
       </div>
-      <div className="flex justify-center"></div>
+
+      <div className="hidden md:block">
+        <Flashlight />
+      </div>
     </div>
   );
 };

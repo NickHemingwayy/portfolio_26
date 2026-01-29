@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import { CoinProvider } from "./providers/coinProvider";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Navbar />
 
           {children}
+          <Footer />
         </CoinProvider>
       </body>
     </html>

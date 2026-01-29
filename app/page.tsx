@@ -1,6 +1,7 @@
 import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
 import { TypingEffect } from "@/components/effects/typing-effect";
 import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
 import Projects from "@/components/sections/Projects";
 import Technologies from "@/components/sections/Technologies";
 import { Button } from "@/components/ui/button";
@@ -23,22 +24,15 @@ export default function Home() {
             <h1 className="font-urban text-6xl font-bold">
               <TypingEffect text="Nick Hemingway" delay={0} />
             </h1>
-            <div className="flex gap-2 items-center group">
-              <span className="text-2xl font-light z-50">
-                <TypingEffect text="Software Developer /" delay={1.8} />
-              </span>
-              <div className="overflow-x-hidden">
-                <div className="translate-x-[-150%] -rotate-90 group-hover:rotate-0 group-hover:translate-x-0 transition-transform fill-mode-forwards">
-                  <Coin />
-                </div>
-              </div>
-            </div>
-            <div className="flex mt-4">
+            <span className="text-2xl font-light z-50">
+              <TypingEffect text="Software Developer /" delay={1.8} />
+            </span>
+            <div className="flex mt-4 gap-4 items-center">
               <Link
                 href="https://www.linkedin.com/in/nick-hemingway-a848b61ab/"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:translate-y-[-15%] transition-transform p-2"
+                className="hover:translate-y-[-15%] transition-transform pb-2"
               >
                 <svg
                   preserveAspectRatio="xMidYMid"
@@ -55,7 +49,7 @@ export default function Home() {
                 href="https://github.com/NickHemingwayy"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:translate-y-[-15%] transition-transform p-2"
+                className="hover:translate-y-[-15%] transition-transform pb-2"
               >
                 <svg
                   viewBox="0 0 1024 1024"
@@ -71,6 +65,9 @@ export default function Home() {
                   />
                 </svg>
               </Link>
+              <div className="hover:translate-y-[-15%] transition-transform pb-2">
+                <Coin id="1" />
+              </div>
             </div>
           </div>
           <div className="flex justify-center absoloute sm:static"></div>
@@ -78,15 +75,17 @@ export default function Home() {
 
         <div className="bg-black z-10 relative pb-10 sm:pb-20">
           <div className="container mx-auto px-4 sm:px-16">
-            <Separator className="mb-10 sm:mb-16 bg-white/50" />
+            <Separator className=" bg-white/50" />
             <About />
 
-            <Separator className="my-10 sm:my-16 bg-white/50" />
+            <Separator className="mb-10 sm:mb-16 bg-white/50" />
 
             <Technologies />
 
             <Separator className="my-10 sm:my-16 bg-white/50" />
             <Projects />
+            <Separator className="my-10 sm:my-16 bg-white/50" />
+            <Contact />
           </div>
         </div>
       </main>
