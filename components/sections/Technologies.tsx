@@ -1,11 +1,14 @@
+"use client";
+import { useState } from "react";
 import Coin from "../ui/coin";
 
 const Technologies = () => {
+  const [figmaCoinActivated, setFigmaCoinActivated] = useState(false);
   return (
     <div className="w-full items-center justify-center">
       <h2 className="font-urban text-4xl font-bold">Technologies</h2>
       <div className="grid grid-cols-3 place-items-center gap-4 sm:grid-cols-3 sm:gap-8 md:grid-cols-4 xl:grid-cols-8 mt-8">
-        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 active:scale-110 sm:w-32">
           <svg
             viewBox="0 0 256 256"
             className="w-8 sm:w-12 aspect-square"
@@ -23,7 +26,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">TypeScript</span>
         </div>
 
-        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 active:scale-110 sm:w-32">
           <svg viewBox="0 0 569 512" className="w-8 sm:w-12 aspect-square">
             <g fill="none" fillRule="evenodd">
               <g
@@ -47,7 +50,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">React</span>
         </div>
 
-        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 active:scale-110 sm:w-32">
           <svg
             fill="none"
             viewBox="0 0 54 33"
@@ -70,7 +73,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">Tailwind</span>
         </div>
 
-        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 active:scale-110 sm:w-32">
           <svg
             fill="none"
             viewBox="16 16 32 32"
@@ -112,7 +115,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">Django</span>
         </div>
 
-        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 active:scale-110 sm:w-32">
           <svg viewBox="0 0 32 32" className="w-8 sm:w-12 aspect-square">
             <path
               d="M14.135 4H18.1v18.169a26.218 26.218 0 0 1-5.143.535c-4.842-.005-7.362-2.168-7.362-6.322 0-4 2.673-6.6 6.816-6.6a6.448 6.448 0 0 1 1.724.2V4Zm0 9.142a3.992 3.992 0 0 0-1.337-.2c-2 0-3.163 1.223-3.163 3.366 0 2.087 1.107 3.239 3.138 3.239a9.355 9.355 0 0 0 1.362-.1v-6.3Z"
@@ -126,7 +129,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">Python</span>
         </div>
 
-        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 active:scale-110 sm:w-32">
           <svg
             preserveAspectRatio="xMidYMid"
             viewBox="0 0 256 252"
@@ -141,7 +144,7 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">MySQL</span>
         </div>
 
-        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+        <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 active:scale-110 sm:w-32">
           <svg
             preserveAspectRatio="xMidYMid"
             viewBox="0 0 256 256"
@@ -155,12 +158,20 @@ const Technologies = () => {
           <span className="text-center text-sm font-medium">Git</span>
         </div>
 
-        <div className="group relative">
-          <div className="absolute mx-auto group-hover:translate-y-[-100%] transition-transform right-0 w-full flex justify-center">
+        <div
+          className="group relative"
+          onMouseEnter={() => setFigmaCoinActivated(true)}
+          onTouchStart={() => setFigmaCoinActivated(true)}
+        >
+          <div
+            className={`absolute mx-auto ${
+              figmaCoinActivated ? "translate-y-[-100%]" : ""
+            } transition-transform right-0 w-full flex justify-center`}
+          >
             <Coin id="2" />
           </div>
 
-          <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 sm:w-32">
+          <div className="bg-secondary flex aspect-square w-20 flex-col items-center justify-center gap-2 rounded-md backdrop-blur-xs transition-transform hover:scale-110 active:scale-110 sm:w-32">
             <svg
               viewBox="0 0 54 80"
               fill="none"
