@@ -25,7 +25,7 @@ export const ContactCard = ({ label, value, href, Icon }: ContactCardProps) => {
   };
 
   return (
-    <div className="border rounded-lg p-10 flex flex-col justify-center relative">
+    <div className="border bg-muted rounded-lg p-10 flex flex-col justify-center relative">
       <Button
         variant="ghost"
         size="icon"
