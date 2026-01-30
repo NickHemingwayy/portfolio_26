@@ -11,16 +11,18 @@ const Contact = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-2 flex-1 grow col-span-2  gap-2 sm:gap-6">
-          <ContactCard
-            label="Email"
-            value="nickhemingway@outlook.com"
-            href="mailto:nickhemingway@outlook.com"
-          />
-          <ContactCard
-            label="Phone"
-            value="(250) 808-3954"
-            href="tel:+12508083954"
-          />
+          <div className="flex-col flex gap-4">
+            <ContactCard
+              label="Email"
+              value="nickhemingway@outlook.com"
+              href="mailto:nickhemingway@outlook.com"
+            />
+            <ContactCard
+              label="Phone"
+              value="(250) 808-3954"
+              href="tel:+12508083954"
+            />
+          </div>
         </div>
       </div>
     </div>
